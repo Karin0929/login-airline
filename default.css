@@ -1,0 +1,177 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Courier New', Courier, monospace;
+    background-color: #ececec;
+}
+
+.mbgbx {
+    height: 100%;
+    background-image: url(images/top-view-travel-map-airplane.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mbgbx2 {
+    height: 100%;
+    background-image: url(images/paper-shapes-different-color-tones.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.center-middlebx {
+    padding: 5% 0 0 0;
+    width: 350px;
+    /* margin: 0 auto; */
+    background-color: #fff;
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    background-color: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.center-middlebx2 {
+    padding: 12% 0 0 0;
+    width: 350px;
+    /* margin: 0 auto; */
+    /* background-color: #fff;
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    background-color: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px; */
+}
+
+.toploglg {
+    width: 130px;
+    height: 130px;
+    padding: 10px;
+    border-radius: 50%;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    /* border: 1px solid red; */
+    /* box-shadow: 0 0 40px rgba(8, 7, 16, 0.6); */
+    background-color: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.ful-width {
+    width: 100%;
+}
+
+.ful-height {
+    height: 100%;
+}
+
+.logobx {
+    height: 55px;
+}
+
+.bx-log {
+    /* width: 55%; */
+    /* border: 1px solid red; */
+    border-radius: 15px;
+    overflow: hidden;
+    /* box-shadow: 0 0 40px rgba(8, 7, 16, 0.6); */
+    /* border: 2px solid rgba(255, 255, 255, 0.1); */
+
+}
+
+.pdslf a {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
+.pdslf a:hover {
+    text-decoration: underline;
+}
+
+.pdslf .form-control,
+.pdslf .input-group-text,
+.logn-btn, .pdslf .form-select {
+    border-radius: 50px;
+}
+
+.pdslf .input-group-text {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.pdslf .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.pdslf .input-group-addon {
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #495057;
+    text-align: center;
+    background-color: #e9ecef;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 0.25rem;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: unset !important;
+    border-bottom-left-radius: unset !important;
+}
+
+.pdslf .form-control:focus {
+    box-shadow: none;
+}
+
+.bgmdl {
+    background-image: url(images/mountainClouds.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.mismatch {
+    color: red;
+    font-size: 12px;
+}
+
+.strongRex {
+    color: rgb(56, 110, 3);
+    font-size: 12px;
+}
+
+@media screen and (max-width: 450px) {
+
+    .center-middlebx,
+    .center-middlebx2 {
+        width: unset;
+    }
+
+    .center-middlebx2 {
+        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+        background-color: rgba(255, 255, 255, 0.13);
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+    }
+
+    .padbx {
+        padding-top: 25%;
+    }
+}

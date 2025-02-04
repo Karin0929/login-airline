@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maria Louisa Manaloto | Front End Designer</title>
+    <meta name="description" content="I have over 10 years of experience as Web UI/UX Designer, Front-End and Graphiphic Designer" />
+    <meta name="keywords" content="Maria Louisa Manaloto, Web Designer, UI Designer, UX Designer, Graphic Designer, Front-End Designer, HTML, CSS" />
+    <link href="fontawesome-free-5.10.2-web/css/all.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="default.css" />
+</head>
+
+<body>
+    <div class="mbgbx">
+        <div class="container">
+            <div class="center-middlebx">
+                <div class="toploglg mx-auto">
+                    <img src="images/Civil_Aeronautics_Board.png" alt="" class="ful-width" />
+                </div>
+                <div class="bx-log mx-auto p-3">
+                    <div class="pdslf text-center text-white">
+                        <form id="userForm">
+                            <div class="mb-3">
+                                <div class="input-group align-items-center">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text " id="basic-addon1">
+                                            <i class="far fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <div style="width: 85%;">
+                                        <input type="email" name="email" id="email" class="form-control"
+                                            placeholder="Enter email*" oninput="validateEmail()">
+                                        <span id="emailError" style="display:none;" class="text-danger">Email is
+                                            invalid.</span>
+                                    </div>
+                                    <!-- <input type="email" name="email" id="email" class="form-control"
+                                        placeholder="Enter email*"> -->
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="input-group align-items-center" id="show_hide_password">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text " id="basic-addon1">
+                                            <i class="fas fa-unlock-alt"></i>
+                                        </span>
+                                    </div>
+                                    <input type="password" name="password" id="password" class="form-control"
+                                        id="password" placeholder="Password*" oninput="validatePassword()">
+                                    <div class="input-group-addon">
+                                        <a href="">
+                                            <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <span id="passwordError" style="display:none;" class="text-danger">
+                                    Password is required.
+                                </span>
+                                <!-- <span id="passwordCriteriaError" style="display:none;" class="text-danger">Password must
+                                    contain special characters, capital letters, and be 9 characters long.</span> -->
+                            </div>
+
+                            <input type="button" value="Login" id="loginButton" class="btn btn-primary logn-btn"
+                                disabled>
+
+                        </form>
+                        <div class="text-center text-secondary">
+                            <p class="pt-3">
+                                Don't have an account? <a href="#" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">Sign Up</a>
+                            </p>
+                            <p><a href="#">Forgot your password?</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal modal-lg fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content bgmdl pdslf">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign Up</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="mb-3">
+                                        <input placeholder="First Name *" id="fname" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="mb-3">
+                                        <input placeholder="Middle Name" id="mname" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="mb-3">
+                                        <input placeholder="Last Name *" id="lname" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="mb-3">
+                                        <select class="form-select" id="nextension" type="text">
+                                            <option selected>Name Extension</option>
+                                            <option value="NA">N/A</option>
+                                            <option value="JR">Jr</option>
+                                            <option value="SR">Sr</option>
+                                            <option value="III">II</option>
+                                            <option value="III">III</option>
+                                        </select>
+                                        <!-- <input placeholder="Name Extension" id="nextension" type="text"
+                                            class="form-control"> -->
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="mb-3">
+                                        <input placeholder="User Name *" id="uname" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="mb-3">
+                                        <select class="form-select" value="Sex *" id="sex" type="text">
+                                            <option selected>Sex</option>
+                                            <option value="M">Male</option>
+                                            <option value="F">Female</option>
+                                        </select>
+                                        <!-- <input placeholder="Sex *" id="sex" type="text" class="form-control"> -->
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="mb-3">
+                                        <input placeholder="Contact  Number * - e.g.: 09123456789" id="contactno"
+                                            type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="mb-3">
+                                        <input placeholder="Birthday *" id="bday" type="date" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <input placeholder="Email Address * - e.g.: name@email.com" id="email"
+                                            type="email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="mb-3">
+                                        <div class="form-group">
+                                            <div class="input-group" id="show_hide_password">
+                                                <input class="form-control" id="password1" type="password"
+                                                    placeholder="Password *" onkeyup="checkPasswordStrength()">
+                                                <div class="input-group-addon">
+                                                    <a href="">
+                                                        <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="passwordRequirements">
+                                                <ul>
+                                                    <li id="reqLength">Minimum 8 characters</li>
+                                                    <li id="reqLower">At least one lowercase letter</li>
+                                                    <li id="reqUpper">At least one uppercase letter</li>
+                                                    <li id="reqNumber">At least one number</li>
+                                                    <li id="reqSpecial">At least one special character (!@#$%^&*)</li>
+                                                </ul>
+                                            </div>
+                                            <!-- <span id="passwordStrength" style="display:none;" class="text-danger">Password must
+                                                contain special characters, capital letters, and be 9 characters long.</span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="mb-3">
+                                        <div class="form-group">
+                                            <div class="input-group" id="show_hide_password">
+                                                <input class="form-control" type="password"
+                                                    placeholder="Confirm Password *" id="confirmPassword"
+                                                    onkeyup="checkPasswordMatch()">
+                                                <div class="input-group-addon">
+                                                    <a href="">
+                                                        <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="passwordMatch"></div>
+                                        </div>
+                                        <p class="pt-3 mt-5">
+                                            Please prove you are not a robot
+                                        </p>
+                                        <div class="capcha-box">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    I'm not a robot
+                                                </label>
+                                            </div>
+                                            <img src="images/captcha-img.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#show_hide_password a").on('click', function (event) {
+                event.preventDefault();
+                if ($('#show_hide_password input').attr("type") == "text") {
+                    $('#show_hide_password input').attr('type', 'password');
+                    $('#show_hide_password i').addClass("fa-eye-slash");
+                    $('#show_hide_password i').removeClass("fa-eye");
+                } else if ($('#show_hide_password input').attr("type") == "password") {
+                    $('#show_hide_password input').attr('type', 'text');
+                    $('#show_hide_password i').removeClass("fa-eye-slash");
+                    $('#show_hide_password i').addClass("fa-eye");
+                }
+            });
+        });
+
+        function isValidEmail(email) {
+            // Regular expression pattern for validating email addresses
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function validateEmail() {
+            var email = document.getElementById("email").value.trim();
+            var emailError = document.getElementById("emailError");
+
+            // Reset error message
+            emailError.style.display = "none";
+
+            // Check if email is filled and valid
+            if (email !== "" && !isValidEmail(email)) {
+                emailError.style.display = "block";
+                emailError.innerText = "Email is invalid.";
+            }
+
+            // Enable/disable login button based on form validity
+            validateForm();
+        }
+
+        function validatePassword() {
+            var password = document.getElementById("password").value.trim();
+            var passwordError = document.getElementById("passwordError");
+
+            // Reset error message
+            passwordError.style.display = "none";
+
+            // Check if password is empty
+            if (password === "") {
+                passwordError.style.display = "block";
+                passwordError.innerText = "Password is required.";
+            }
+
+            // Enable/disable login button based on form validity
+            validateForm();
+        }
+
+        function validateForm() {
+            var email = document.getElementById("email").value.trim();
+            var password = document.getElementById("password").value.trim();
+            var loginButton = document.getElementById("loginButton");
+
+            // Check if both email and password are filled and valid
+            var isValidEmailFormat = isValidEmail(email);
+            var isEmailEmpty = email === "";
+            var isPasswordEmpty = password === "";
+
+            loginButton.disabled = isEmailEmpty || !isValidEmailFormat || isPasswordEmpty;
+        }
+
+
+        function checkPasswordStrength() {
+            var password = document.getElementById("password1").value;
+            var reqLength = document.getElementById("reqLength");
+            var reqLower = document.getElementById("reqLower");
+            var reqUpper = document.getElementById("reqUpper");
+            var reqNumber = document.getElementById("reqNumber");
+            var reqSpecial = document.getElementById("reqSpecial");
+            var passwordRequirements = document.getElementById("passwordRequirements");
+            var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$");
+            var valid = true;
+
+            if (!password) {
+                passwordRequirements.innerHTML = `
+            <ul>
+                <li id="reqLength">Minimum 8 characters</li>
+                <li id="reqLower">At least one lowercase letter</li>
+                <li id="reqUpper">At least one uppercase letter</li>
+                <li id="reqNumber">At least one number</li>
+                <li id="reqSpecial">At least one special character (!@#$%^&*)</li>
+            </ul>
+        `;
+                return;
+            }
+
+            if (password.length >= 8) {
+                reqLength.classList.add("completed");
+            } else {
+                reqLength.classList.remove("completed");
+                valid = false;
+            }
+
+            if (/[a-z]/.test(password)) {
+                reqLower.classList.add("completed");
+            } else {
+                reqLower.classList.remove("completed");
+                valid = false;
+            }
+
+            if (/[A-Z]/.test(password)) {
+                reqUpper.classList.add("completed");
+            } else {
+                reqUpper.classList.remove("completed");
+                valid = false;
+            }
+
+            if (/\d/.test(password)) {
+                reqNumber.classList.add("completed");
+            } else {
+                reqNumber.classList.remove("completed");
+                valid = false;
+            }
+
+            if (/[!@#$%^&*]/.test(password)) {
+                reqSpecial.classList.add("completed");
+            } else {
+                reqSpecial.classList.remove("completed");
+                valid = false;
+            }
+
+            if (valid && strongRegex.test(password)) {
+                document.getElementById("passwordRequirements").innerHTML = "Password strength: Strong";
+            }
+        }
+
+        function checkPasswordMatch() {
+            var password = document.getElementById("password1").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var passwordMatch = document.getElementById("passwordMatch");
+
+            if (password === confirmPassword && password) {
+                passwordMatch.innerHTML = "Passwords match";
+                passwordMatch.classList.remove("mismatch");
+            } else {
+                passwordMatch.innerHTML = "Passwords do not match";
+                passwordMatch.classList.add("mismatch");
+            }
+        }
+
+        
+    </script>
+
+</body>
+
+</html>
